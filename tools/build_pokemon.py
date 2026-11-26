@@ -1,6 +1,8 @@
 """Bundle real Pokémon TCG sets + Cardmarket/TCGplayer prices from TCGdex (api.tcgdex.net)."""
 import json,os,sys,time,urllib.request,concurrent.futures as cf
-API='https://api.tcgdex.net/v2/en'
+LANG=os.environ.get('PKLANG','en')
+API='https://api.tcgdex.net/v2/'+LANG
+PFX='pk-' if LANG=='en' else 'pkj-'
 OUT=os.path.join(os.path.dirname(__file__),'..','data','sets'); os.makedirs(OUT,exist_ok=True)
 SETS=['me06','30th','me05','me04','me03','me02.5','me02','me01','mep',
 'sv10.5w','sv10.5b','sv10','sv09','sv08.5','sv08','sv07','sv06.5','sv06','sv05','sv04.5','sv04','sv03.5','sv03','sv02','sv01','svp',
@@ -50,12 +52,12 @@ def build(sid):
     ids=[c['id'] for c in s.get('cards',[])]
     with cf.ThreadPoolExecutor(16) as ex: cards=list(ex.map(card,ids))
     dates=sorted({c['p'].get('cmd') or c['p'].get('tpd') for c in cards if c.get('p')} - {None})
-    meta={'id':'pk-'+sid,'cat':'pokemon','api':'tcgdex','apiId':sid,'name':s['name'],'series':(s.get('serie') or {}).get('name'),
+    meta={'id':PFX+sid,'cat':'pokemon','lang':LANG,'api':'tcgdex','apiId':sid,'name':s['name'] if LANG=='en' else f"{sid} {s['name']}",'series':(s.get('serie') or {}).get('name'),
           'release':s.get('releaseDate'),'official':(s.get('cardCount') or {}).get('official'),'total':len(cards),
           'logo':s.get('logo'),'symbol':s.get('symbol'),
           'source':{'name':'TCGdex','url':f'https://tcgdex.dev'},'priceSource':'Cardmarket (EUR) + TCGplayer (USD) via TCGdex',
           'priceDate':dates[-1] if dates else None,'fetched':time.strftime('%Y-%m-%d')}
-    json.dump({**meta,'cards':cards},open(f'{OUT}/pk-{sid}.json','w'),ensure_ascii=False,separators=(',',':'))
+    json.dump({**meta,'cards':cards},open(f'{OUT}/{PFX}{sid}.json','w'),ensure_ascii=False,separators=(',',':'))
     print(sid,s['name'],len(cards),'priced',sum(1 for c in cards if c.get('p')),flush=True)
     return meta
 if __name__=='__main__':
@@ -63,4 +65,4 @@ if __name__=='__main__':
     for sid in sets:
         try: metas.append(build(sid))
         except Exception as e: print('FAIL',sid,e,flush=True)
-    json.dump(metas,open(os.path.join(OUT,'..','pokemon_index.json'),'w'),ensure_ascii=False,indent=0)
+    json.dump(metas,open(os.path.join(OUT,'..','pokemon_index.json' if LANG=='en' else 'pokemon_ja_index.json'),'w'),ensure_ascii=False,indent=0)

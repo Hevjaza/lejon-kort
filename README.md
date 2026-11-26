@@ -22,3 +22,10 @@ python3 build_onepiece.py     # OPTCG API – set + priser
 python3 build_sports.py       # från nedladdade checklistor i tools/sources/ (ingår inte i repot)
 python3 build_index.py        # data/index.json + växelkurs
 ```
+
+## v2 (2026-11-26)
+- 📷 **Kortskanning** (kamera eller bild, OCR på telefonen med Tesseract.js) – läser kortnummer (199/165), setkod (SV2a, S12a), One Piece-koder (OP05-119) och PSA/BGS/CGC-etiketter. Sökruta för att skriva koden direkt.
+- 🏅 **Ogradat och Graderat** som separata exemplar (PSA/BGS/CGC/TAG, betyg, cert, köppris, värde, foto).
+- 💰 Tydligare priser och **Kolla pris** med graderingsval i varje kort.
+- 🇯🇵 **Japanska kort**: 36 japanska Pokémon-set (TCGdex `/v2/ja`, Cardmarket-pris för japansk utgåva) + alla andra live; One Piece EN/JP-växel med egen JP-samling och JP-prislänkar (SNKRDUNK, Yuyu-tei, PriceCharting, eBay sålda).
+- ¥ **JPY** i valutaväljaren (live-kurs från open.er-api.com).

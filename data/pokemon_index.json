@@ -1,0 +1,742 @@
+[
+{
+"id": "pk-me06",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "me06",
+"name": "Delta Reign",
+"series": "Mega Evolution",
+"release": "2026-11-06",
+"official": 103,
+"total": 141,
+"logo": null,
+"symbol": null,
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-30th",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "30th",
+"name": "30th Celebration",
+"series": "Mega Evolution",
+"release": "2026-09-16",
+"official": 128,
+"total": 161,
+"logo": null,
+"symbol": null,
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-me05",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "me05",
+"name": "Pitch Black",
+"series": "Mega Evolution",
+"release": "2026-07-17",
+"official": 84,
+"total": 120,
+"logo": "https://assets.tcgdex.net/en/me/me05/logo",
+"symbol": "https://assets.tcgdex.net/univ/me/me05/symbol",
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-me04",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "me04",
+"name": "Chaos Rising",
+"series": "Mega Evolution",
+"release": "2026-05-22",
+"official": 86,
+"total": 122,
+"logo": "https://assets.tcgdex.net/en/me/me04/logo",
+"symbol": "https://assets.tcgdex.net/univ/me/me04/symbol",
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-me03",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "me03",
+"name": "Perfect Order",
+"series": "Mega Evolution",
+"release": "2026-03-27",
+"official": 88,
+"total": 124,
+"logo": "https://assets.tcgdex.net/en/me/me03/logo",
+"symbol": "https://assets.tcgdex.net/univ/me/me03/symbol",
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-me02.5",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "me02.5",
+"name": "Ascended Heroes",
+"series": "Mega Evolution",
+"release": "2026-01-30",
+"official": 217,
+"total": 295,
+"logo": "https://assets.tcgdex.net/en/me/me02.5/logo",
+"symbol": "https://assets.tcgdex.net/univ/me/me02.5/symbol",
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-me02",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "me02",
+"name": "Phantasmal Flames",
+"series": "Mega Evolution",
+"release": "2025-11-14",
+"official": 94,
+"total": 130,
+"logo": "https://assets.tcgdex.net/en/me/me02/logo",
+"symbol": null,
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-me01",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "me01",
+"name": "Mega Evolution",
+"series": "Mega Evolution",
+"release": "2025-09-26",
+"official": 132,
+"total": 188,
+"logo": "https://assets.tcgdex.net/en/me/me01/logo",
+"symbol": "https://assets.tcgdex.net/univ/me/me01/symbol",
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-mep",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "mep",
+"name": "MEP Black Star Promos",
+"series": "Mega Evolution",
+"release": "2025-09-26",
+"official": 0,
+"total": 112,
+"logo": null,
+"symbol": null,
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-sv10.5w",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "sv10.5w",
+"name": "White Flare",
+"series": "Scarlet & Violet",
+"release": "2025-07-17",
+"official": 86,
+"total": 173,
+"logo": "https://assets.tcgdex.net/en/sv/sv10.5w/logo",
+"symbol": "https://assets.tcgdex.net/univ/sv/sv10.5w/symbol",
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-sv10.5b",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "sv10.5b",
+"name": "Black Bolt",
+"series": "Scarlet & Violet",
+"release": "2025-07-17",
+"official": 86,
+"total": 172,
+"logo": "https://assets.tcgdex.net/en/sv/sv10.5b/logo",
+"symbol": "https://assets.tcgdex.net/univ/sv/sv10.5b/symbol",
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-sv10",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "sv10",
+"name": "Destined Rivals",
+"series": "Scarlet & Violet",
+"release": "2025-05-30",
+"official": 182,
+"total": 244,
+"logo": "https://assets.tcgdex.net/en/sv/sv10/logo",
+"symbol": "https://assets.tcgdex.net/univ/sv/sv10/symbol",
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-sv09",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "sv09",
+"name": "Journey Together",
+"series": "Scarlet & Violet",
+"release": "2025-03-28",
+"official": 159,
+"total": 190,
+"logo": "https://assets.tcgdex.net/en/sv/sv09/logo",
+"symbol": "https://assets.tcgdex.net/univ/sv/sv09/symbol",
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-sv08.5",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "sv08.5",
+"name": "Prismatic Evolutions",
+"series": "Scarlet & Violet",
+"release": "2025-01-17",
+"official": 131,
+"total": 180,
+"logo": "https://assets.tcgdex.net/en/sv/sv08.5/logo",
+"symbol": null,
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-sv08",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "sv08",
+"name": "Surging Sparks",
+"series": "Scarlet & Violet",
+"release": "2024-11-08",
+"official": 191,
+"total": 252,
+"logo": "https://assets.tcgdex.net/en/sv/sv08/logo",
+"symbol": null,
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-sv07",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "sv07",
+"name": "Stellar Crown",
+"series": "Scarlet & Violet",
+"release": "2024-09-13",
+"official": 142,
+"total": 175,
+"logo": "https://assets.tcgdex.net/en/sv/sv07/logo",
+"symbol": null,
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-sv06.5",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "sv06.5",
+"name": "Shrouded Fable",
+"series": "Scarlet & Violet",
+"release": "2024-08-02",
+"official": 64,
+"total": 99,
+"logo": "https://assets.tcgdex.net/en/sv/sv06.5/logo",
+"symbol": "https://assets.tcgdex.net/univ/sv/sv06.5/symbol",
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-sv06",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "sv06",
+"name": "Twilight Masquerade",
+"series": "Scarlet & Violet",
+"release": "2024-05-24",
+"official": 167,
+"total": 226,
+"logo": "https://assets.tcgdex.net/en/sv/sv06/logo",
+"symbol": "https://assets.tcgdex.net/univ/sv/sv06/symbol",
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-sv05",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "sv05",
+"name": "Temporal Forces",
+"series": "Scarlet & Violet",
+"release": "2024-03-22",
+"official": 162,
+"total": 218,
+"logo": null,
+"symbol": "https://assets.tcgdex.net/univ/sv/sv05/symbol",
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-sv04.5",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "sv04.5",
+"name": "Paldean Fates",
+"series": "Scarlet & Violet",
+"release": "2024-01-26",
+"official": 91,
+"total": 245,
+"logo": "https://assets.tcgdex.net/en/sv/sv04.5/logo",
+"symbol": "https://assets.tcgdex.net/univ/sv/sv04.5/symbol",
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-sv04",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "sv04",
+"name": "Paradox Rift",
+"series": "Scarlet & Violet",
+"release": "2023-11-03",
+"official": 182,
+"total": 266,
+"logo": "https://assets.tcgdex.net/en/sv/sv04/logo",
+"symbol": "https://assets.tcgdex.net/univ/sv/sv04/symbol",
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-sv03.5",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "sv03.5",
+"name": "151",
+"series": "Scarlet & Violet",
+"release": "2023-09-22",
+"official": 165,
+"total": 207,
+"logo": "https://assets.tcgdex.net/en/sv/sv03.5/logo",
+"symbol": "https://assets.tcgdex.net/univ/sv/sv03.5/symbol",
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-sv03",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "sv03",
+"name": "Obsidian Flames",
+"series": "Scarlet & Violet",
+"release": "2023-08-11",
+"official": 197,
+"total": 230,
+"logo": "https://assets.tcgdex.net/en/sv/sv03/logo",
+"symbol": "https://assets.tcgdex.net/univ/sv/sv03/symbol",
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-sv02",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "sv02",
+"name": "Paldea Evolved",
+"series": "Scarlet & Violet",
+"release": "2023-06-09",
+"official": 193,
+"total": 279,
+"logo": "https://assets.tcgdex.net/en/sv/sv02/logo",
+"symbol": "https://assets.tcgdex.net/univ/sv/sv02/symbol",
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-sv01",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "sv01",
+"name": "Scarlet & Violet",
+"series": "Scarlet & Violet",
+"release": "2023-03-31",
+"official": 198,
+"total": 258,
+"logo": "https://assets.tcgdex.net/en/sv/sv01/logo",
+"symbol": "https://assets.tcgdex.net/univ/sv/sv01/symbol",
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-svp",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "svp",
+"name": "SVP Black Star Promos",
+"series": "Scarlet & Violet",
+"release": "2023-03-31",
+"official": 225,
+"total": 226,
+"logo": null,
+"symbol": null,
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-swsh12.5",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "swsh12.5",
+"name": "Crown Zenith",
+"series": "Sword & Shield",
+"release": "2023-01-20",
+"official": 159,
+"total": 160,
+"logo": "https://assets.tcgdex.net/en/swsh/swsh12.5/logo",
+"symbol": "https://assets.tcgdex.net/univ/swsh/swsh12.5/symbol",
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-swsh12.5gg",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "swsh12.5gg",
+"name": "Crown Zenith Galarian Gallery",
+"series": "Sword & Shield",
+"release": "2023-01-20",
+"official": 70,
+"total": 70,
+"logo": null,
+"symbol": null,
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-swsh7",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "swsh7",
+"name": "Evolving Skies",
+"series": "Sword & Shield",
+"release": "2021-08-27",
+"official": 203,
+"total": 237,
+"logo": "https://assets.tcgdex.net/en/swsh/swsh7/logo",
+"symbol": "https://assets.tcgdex.net/univ/swsh/swsh7/symbol",
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-cel25",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "cel25",
+"name": "Celebrations",
+"series": "Sword & Shield",
+"release": "2021-10-08",
+"official": 25,
+"total": 25,
+"logo": "https://assets.tcgdex.net/en/swsh/cel25/logo",
+"symbol": "https://assets.tcgdex.net/univ/swsh/cel25/symbol",
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-cel25cc",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "cel25cc",
+"name": "Celebrations Classic Collection",
+"series": "Sword & Shield",
+"release": "2021-10-08",
+"official": 25,
+"total": 25,
+"logo": null,
+"symbol": null,
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-swsh4.5",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "swsh4.5",
+"name": "Shining Fates",
+"series": "Sword & Shield",
+"release": "2021-02-19",
+"official": 72,
+"total": 73,
+"logo": "https://assets.tcgdex.net/en/swsh/swsh4.5/logo",
+"symbol": "https://assets.tcgdex.net/univ/swsh/swsh4.5/symbol",
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-swsh4.5sv",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "swsh4.5sv",
+"name": "Shining Fates Shiny Vault",
+"series": "Sword & Shield",
+"release": "2021-02-19",
+"official": 122,
+"total": 122,
+"logo": null,
+"symbol": null,
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-base1",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "base1",
+"name": "Base Set",
+"series": "Base",
+"release": "1999-01-09",
+"official": 102,
+"total": 102,
+"logo": "https://assets.tcgdex.net/en/base/base1/logo",
+"symbol": null,
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-base2",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "base2",
+"name": "Jungle",
+"series": "Base",
+"release": "1999-06-16",
+"official": 64,
+"total": 64,
+"logo": "https://assets.tcgdex.net/en/base/base2/logo",
+"symbol": "https://assets.tcgdex.net/univ/base/base2/symbol",
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-base3",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "base3",
+"name": "Fossil",
+"series": "Base",
+"release": "1999-10-10",
+"official": 62,
+"total": 62,
+"logo": "https://assets.tcgdex.net/en/base/base3/logo",
+"symbol": "https://assets.tcgdex.net/univ/base/base3/symbol",
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "pk-base5",
+"cat": "pokemon",
+"api": "tcgdex",
+"apiId": "base5",
+"name": "Team Rocket",
+"series": "Base",
+"release": "2000-04-24",
+"official": 82,
+"total": 83,
+"logo": "https://assets.tcgdex.net/en/base/base5/logo",
+"symbol": "https://assets.tcgdex.net/univ/base/base5/symbol",
+"source": {
+"name": "TCGdex",
+"url": "https://tcgdex.dev"
+},
+"priceSource": "Cardmarket (EUR) + TCGplayer (USD) via TCGdex",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+}
+]

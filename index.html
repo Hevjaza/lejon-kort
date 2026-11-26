@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lejon Kort</title>
+<meta name="description" content="Samla Pokémon, One Piece, fotbolls-, basket- och hockeykort. Set, Masterset och priser.">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0b0f18">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Lejon Kort">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><img src="icon-192.png" alt="" class="logo"><div><h1>Lejon Kort</h1><div class="upd" id="upd">Laddar…</div></div></div>
+  <div class="cur" id="curtop"></div>
+</header>
+<main id="app"><div class="loading">Laddar din samling…</div></main>
+<nav class="tabbar" id="tabbar">
+  <button data-tab="oversikt" class="on"><span>◎</span>Översikt</button>
+  <button data-tab="set"><span>▦</span>Set &amp; Masterset</button>
+  <button data-tab="samling"><span>★</span>Min samling</button>
+  <button data-tab="backup"><span>⚙</span>Pris &amp; Backup</button>
+</nav>
+<div class="sheet-bg" id="sheetbg"></div>
+<div class="sheet" id="sheet" role="dialog" aria-modal="true"></div>
+<div class="toast" id="toast"></div>
+<script src="app.js?v=1"></script>
+</body>
+</html>

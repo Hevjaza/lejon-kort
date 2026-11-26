@@ -1,0 +1,1390 @@
+[
+{
+"id": "fo-topps-chrome-uefa-club-competitions-2025-26",
+"cat": "fotboll",
+"name": "Topps Chrome UEFA Club Competitions 2025/26",
+"release": "2026-05-07",
+"total": 502,
+"official": 200,
+"subsets": [
+{
+"name": "Base Set",
+"base": true
+},
+{
+"name": "Base Big Apple Variations",
+"base": false
+},
+{
+"name": "Anime",
+"base": false
+},
+{
+"name": "Bionic",
+"base": false
+},
+{
+"name": "Bowman UEFA Youth League",
+"base": false
+},
+{
+"name": "Budapest at Night",
+"base": false
+},
+{
+"name": "Helix",
+"base": false
+},
+{
+"name": "Hidden Gems",
+"base": false
+},
+{
+"name": "Last Dance",
+"base": false
+},
+{
+"name": "Metaverse",
+"base": false
+},
+{
+"name": "Power Players",
+"base": false
+},
+{
+"name": "Radiating Rookies",
+"base": false
+},
+{
+"name": "Shadow Etch",
+"base": false
+},
+{
+"name": "Shooting for the Stars",
+"base": false
+},
+{
+"name": "Silenced",
+"base": false
+},
+{
+"name": "Starball Legends",
+"base": false
+},
+{
+"name": "The Grail",
+"base": false
+},
+{
+"name": "Ultra Violet",
+"base": false
+},
+{
+"name": "Veni Vidi Vici",
+"base": false
+},
+{
+"name": "Wonderkids",
+"base": false
+},
+{
+"name": "Youthquake",
+"base": false
+}
+],
+"source": {
+"name": "soccr.cloud",
+"url": "https://www.soccr.cloud/en/sets/topps-chrome-uefa-club-competitions-2025-26"
+},
+"priceSource": null,
+"fetched": "2026-11-26"
+},
+{
+"id": "fo-topps-chrome-premier-league-2025-26",
+"cat": "fotboll",
+"name": "Topps Chrome Premier League 2025/26",
+"release": "2026-02-05",
+"total": 646,
+"official": 200,
+"subsets": [
+{
+"name": "Base Set",
+"base": true
+},
+{
+"name": "Extended Base Set",
+"base": false
+},
+{
+"name": "A Cold and Rainy Night in Chrome",
+"base": false
+},
+{
+"name": "Alive and Kicking",
+"base": false
+},
+{
+"name": "Anime",
+"base": false
+},
+{
+"name": "Black Edge",
+"base": false
+},
+{
+"name": "Clinical Chrome",
+"base": false
+},
+{
+"name": "Club Crests",
+"base": false
+},
+{
+"name": "Genius",
+"base": false
+},
+{
+"name": "Give Him His Flowers",
+"base": false
+},
+{
+"name": "Golazo",
+"base": false
+},
+{
+"name": "Helix",
+"base": false
+},
+{
+"name": "Hidden Gems",
+"base": false
+},
+{
+"name": "Lightning Chrome",
+"base": false
+},
+{
+"name": "Locked In",
+"base": false
+},
+{
+"name": "Monday Night Lights",
+"base": false
+},
+{
+"name": "Stoppage Time Heartbreaker",
+"base": false
+},
+{
+"name": "That's His Job",
+"base": false
+},
+{
+"name": "The Streets Won't Forget",
+"base": false
+},
+{
+"name": "Triple Platinum",
+"base": false
+}
+],
+"source": {
+"name": "soccr.cloud",
+"url": "https://www.soccr.cloud/en/sets/topps-chrome-premier-league-2025-26"
+},
+"priceSource": null,
+"fetched": "2026-11-26"
+},
+{
+"id": "fo-panini-prizm-fifa-world-cup-2026",
+"cat": "fotboll",
+"name": "Panini Prizm FIFA World Cup 2026",
+"release": "2026-06-26",
+"total": 1055,
+"official": 500,
+"subsets": [
+{
+"name": "Base Set",
+"base": true
+},
+{
+"name": "Base Variations",
+"base": false
+},
+{
+"name": "Aces",
+"base": false
+},
+{
+"name": "Alter Ego",
+"base": false
+},
+{
+"name": "Color Blast",
+"base": false
+},
+{
+"name": "Color Blast Duals",
+"base": false
+},
+{
+"name": "Color Wheel",
+"base": false
+},
+{
+"name": "Connections",
+"base": false
+},
+{
+"name": "Global Reach",
+"base": false
+},
+{
+"name": "Manga",
+"base": false
+},
+{
+"name": "National Landmarks",
+"base": false
+},
+{
+"name": "National Pride",
+"base": false
+},
+{
+"name": "New Era",
+"base": false
+},
+{
+"name": "Phenomenon",
+"base": false
+},
+{
+"name": "Prizmania",
+"base": false
+},
+{
+"name": "Scorers Club",
+"base": false
+},
+{
+"name": "Screamers",
+"base": false
+},
+{
+"name": "Team Badges",
+"base": false
+},
+{
+"name": "Trophy Hunting",
+"base": false
+},
+{
+"name": "National Heroes",
+"base": false
+},
+{
+"name": "Winning Captains",
+"base": false
+}
+],
+"source": {
+"name": "soccr.cloud",
+"url": "https://www.soccr.cloud/en/sets/panini-prizm-fifa-world-cup-2026"
+},
+"priceSource": null,
+"fetched": "2026-11-26"
+},
+{
+"id": "fo-topps-chrome-uefa-club-competitions-2024-25",
+"cat": "fotboll",
+"name": "Topps Chrome UEFA Club Competitions 2024/25",
+"release": "2025-05-15",
+"total": 456,
+"official": 200,
+"subsets": [
+{
+"name": "Base Set",
+"base": true
+},
+{
+"name": "Base Hero Variations",
+"base": false
+},
+{
+"name": "Bowman UEFA Youth League",
+"base": false
+},
+{
+"name": "Circle of Power",
+"base": false
+},
+{
+"name": "Final Destination",
+"base": false
+},
+{
+"name": "Golazo",
+"base": false
+},
+{
+"name": "Helix",
+"base": false
+},
+{
+"name": "Hidden Gems",
+"base": false
+},
+{
+"name": "Munich at Night",
+"base": false
+},
+{
+"name": "Radiating Rookies",
+"base": false
+},
+{
+"name": "Shadow Etch",
+"base": false
+},
+{
+"name": "Soccer Brush",
+"base": false
+},
+{
+"name": "The Grail",
+"base": false
+},
+{
+"name": "Tifo",
+"base": false
+},
+{
+"name": "White Noise",
+"base": false
+},
+{
+"name": "Wonderkids",
+"base": false
+},
+{
+"name": "Youthquake",
+"base": false
+}
+],
+"source": {
+"name": "soccr.cloud",
+"url": "https://www.soccr.cloud/en/sets/topps-chrome-uefa-club-competitions-2024-25"
+},
+"priceSource": null,
+"fetched": "2026-11-26"
+},
+{
+"id": "fo-panini-prizm-premier-league-2024-25",
+"cat": "fotboll",
+"name": "Panini Prizm Premier League 2024/25",
+"release": "2025-04-30",
+"total": 600,
+"official": 300,
+"subsets": [
+{
+"name": "Base Set",
+"base": true
+},
+{
+"name": "Brilliance",
+"base": false
+},
+{
+"name": "Center Stage",
+"base": false
+},
+{
+"name": "Color Blast",
+"base": false
+},
+{
+"name": "Emergent",
+"base": false
+},
+{
+"name": "Fireworks",
+"base": false
+},
+{
+"name": "Flashback 2014",
+"base": false
+},
+{
+"name": "Fractal",
+"base": false
+},
+{
+"name": "Kaleidoscopic",
+"base": false
+},
+{
+"name": "Manga",
+"base": false
+},
+{
+"name": "Prizmania",
+"base": false
+},
+{
+"name": "Sublime",
+"base": false
+},
+{
+"name": "Talismen",
+"base": false
+}
+],
+"source": {
+"name": "soccr.cloud",
+"url": "https://www.soccr.cloud/en/sets/panini-prizm-premier-league-2024-25"
+},
+"priceSource": null,
+"fetched": "2026-11-26"
+},
+{
+"id": "ba-2025-26-topps-chrome-basketball",
+"cat": "basket",
+"name": "2025-26 Topps Chrome Basketball",
+"release": "2025-12-18",
+"total": 818,
+"official": 299,
+"subsets": [
+{
+"name": "Base",
+"base": true
+},
+{
+"name": "Activators",
+"base": false
+},
+{
+"name": "Advisory",
+"base": false
+},
+{
+"name": "Ball of Duty",
+"base": false
+},
+{
+"name": "Clutch Gene",
+"base": false
+},
+{
+"name": "Destiny",
+"base": false
+},
+{
+"name": "Fanatical",
+"base": false
+},
+{
+"name": "Finals",
+"base": false
+},
+{
+"name": "Generation Rising",
+"base": false
+},
+{
+"name": "Glass Canvas",
+"base": false
+},
+{
+"name": "Go Time",
+"base": false
+},
+{
+"name": "Helix",
+"base": false
+},
+{
+"name": "Hidden Gems",
+"base": false
+},
+{
+"name": "Inspirational",
+"base": false
+},
+{
+"name": "Instinct",
+"base": false
+},
+{
+"name": "Let's Go",
+"base": false
+},
+{
+"name": "Loading...",
+"base": false
+},
+{
+"name": "Paradox",
+"base": false
+},
+{
+"name": "Patented",
+"base": false
+},
+{
+"name": "Radiating Rookies",
+"base": false
+},
+{
+"name": "Rock Stars",
+"base": false
+},
+{
+"name": "Serenity",
+"base": false
+},
+{
+"name": "Sleek Finishers",
+"base": false
+},
+{
+"name": "Tall Tales",
+"base": false
+},
+{
+"name": "Ultraviolet",
+"base": false
+},
+{
+"name": "Voices",
+"base": false
+},
+{
+"name": "X's & Whoa's",
+"base": false
+},
+{
+"name": "YouthQuake",
+"base": false
+}
+],
+"source": {
+"name": "Checklist Insider",
+"url": "https://www.checklistinsider.com/2025-26-topps-chrome-basketball"
+},
+"priceSource": null,
+"fetched": "2026-11-26"
+},
+{
+"id": "ba-2025-26-topps-basketball",
+"cat": "basket",
+"name": "2025-26 Topps Basketball",
+"release": "2025-10-23",
+"total": 922,
+"official": 300,
+"subsets": [
+{
+"name": "Base",
+"base": true
+},
+{
+"name": "Base Player Number Variations",
+"base": false
+},
+{
+"name": "All Kings",
+"base": false
+},
+{
+"name": "Big Box Ballers",
+"base": false
+},
+{
+"name": "Clutch City Prospects",
+"base": false
+},
+{
+"name": "Comic Court",
+"base": false
+},
+{
+"name": "Companion Cards",
+"base": false
+},
+{
+"name": "Companion Cards Short Prints",
+"base": false
+},
+{
+"name": "Generation Now",
+"base": false
+},
+{
+"name": "Hardwood Stars",
+"base": false
+},
+{
+"name": "Hidden Gems (Emerald Green)",
+"base": false
+},
+{
+"name": "Home Court",
+"base": false
+},
+{
+"name": "Levitation",
+"base": false
+},
+{
+"name": "Limited Stock Legends",
+"base": false
+},
+{
+"name": "MVP Vault",
+"base": false
+},
+{
+"name": "New School",
+"base": false
+},
+{
+"name": "No Limit",
+"base": false
+},
+{
+"name": "Oversized Topps Cards",
+"base": false
+},
+{
+"name": "Oversized Topps Cards Short Prints",
+"base": false
+},
+{
+"name": "Power Players",
+"base": false
+},
+{
+"name": "Rip Night",
+"base": false
+},
+{
+"name": "Rise to Stardom",
+"base": false
+},
+{
+"name": "Scan and Slam",
+"base": false
+},
+{
+"name": "Social Media Followback Redemption",
+"base": false
+},
+{
+"name": "Sole Ambition",
+"base": false
+},
+{
+"name": "Sonic Boom",
+"base": false
+},
+{
+"name": "Stars of the NBA",
+"base": false
+},
+{
+"name": "The Daily Dribble",
+"base": false
+}
+],
+"source": {
+"name": "Checklist Insider",
+"url": "https://www.checklistinsider.com/2025-26-topps-basketball"
+},
+"priceSource": null,
+"fetched": "2026-11-26"
+},
+{
+"id": "ba-2024-25-panini-prizm-basketball",
+"cat": "basket",
+"name": "2024-25 Panini Prizm Basketball",
+"release": null,
+"total": 640,
+"official": 300,
+"subsets": [
+{
+"name": "Base",
+"base": true
+},
+{
+"name": "Base Variations",
+"base": false
+},
+{
+"name": "Base Rookie Variations",
+"base": false
+},
+{
+"name": "Deep Space",
+"base": false
+},
+{
+"name": "Dominance",
+"base": false
+},
+{
+"name": "Emergent",
+"base": false
+},
+{
+"name": "Fireworks",
+"base": false
+},
+{
+"name": "Fractal",
+"base": false
+},
+{
+"name": "Global Reach",
+"base": false
+},
+{
+"name": "Groovy",
+"base": false
+},
+{
+"name": "Instant Impact",
+"base": false
+},
+{
+"name": "Kaleidoscopic",
+"base": false
+},
+{
+"name": "Luck of the Lottery",
+"base": false
+},
+{
+"name": "Manga",
+"base": false
+},
+{
+"name": "Prizmania",
+"base": false
+},
+{
+"name": "Sublime",
+"base": false
+},
+{
+"name": "Talismen",
+"base": false
+}
+],
+"source": {
+"name": "Checklist Insider",
+"url": "https://www.checklistinsider.com/2024-25-panini-prizm-basketball"
+},
+"priceSource": null,
+"fetched": "2026-11-26"
+},
+{
+"id": "ba-2023-24-panini-prizm-basketball",
+"cat": "basket",
+"name": "2023-24 Panini Prizm Basketball",
+"release": null,
+"total": 540,
+"official": 300,
+"subsets": [
+{
+"name": "Base",
+"base": true
+},
+{
+"name": "Base Rookie Variations",
+"base": false
+},
+{
+"name": "Deep Space",
+"base": false
+},
+{
+"name": "Dominance",
+"base": false
+},
+{
+"name": "Emergent",
+"base": false
+},
+{
+"name": "Fireworks",
+"base": false
+},
+{
+"name": "Fractal",
+"base": false
+},
+{
+"name": "Global Reach",
+"base": false
+},
+{
+"name": "Instant Impact",
+"base": false
+},
+{
+"name": "Kaleidoscopic",
+"base": false
+},
+{
+"name": "Luck of the Lottery",
+"base": false
+},
+{
+"name": "Prizm Break",
+"base": false
+},
+{
+"name": "Prizmania",
+"base": false
+}
+],
+"source": {
+"name": "Checklist Insider",
+"url": "https://www.checklistinsider.com/2023-24-panini-prizm-basketball"
+},
+"priceSource": null,
+"fetched": "2026-11-26"
+},
+{
+"id": "ho-2026-27-upper-deck-series-1-hockey",
+"cat": "hockey",
+"name": "2026-27 Upper Deck Series 1 Hockey",
+"release": "2026-10-07",
+"total": 1037,
+"official": 247,
+"subsets": [
+{
+"name": "Base",
+"base": true
+},
+{
+"name": "Base Young Guns",
+"base": true
+},
+{
+"name": "Base Oversized Young Guns",
+"base": false
+},
+{
+"name": "Base Country Logo Variations",
+"base": false
+},
+{
+"name": "Base Off-Ice Variations",
+"base": false
+},
+{
+"name": "Base Swagnificent Variations",
+"base": false
+},
+{
+"name": "Base Team Color Variations",
+"base": false
+},
+{
+"name": "1994-95 Rookie Die-Cut",
+"base": false
+},
+{
+"name": "Bootleg",
+"base": false
+},
+{
+"name": "Dazzlers",
+"base": false
+},
+{
+"name": "Debut Dates",
+"base": false
+},
+{
+"name": "Electric Soul",
+"base": false
+},
+{
+"name": "Fan Faves",
+"base": false
+},
+{
+"name": "Fanimation",
+"base": false
+},
+{
+"name": "Here We Go!",
+"base": false
+},
+{
+"name": "Holotypes",
+"base": false
+},
+{
+"name": "Newest Foundations",
+"base": false
+},
+{
+"name": "Outburst Retro Young Guns",
+"base": false
+},
+{
+"name": "Ovation",
+"base": false
+},
+{
+"name": "Population Count",
+"base": false
+},
+{
+"name": "Repping",
+"base": false
+},
+{
+"name": "Rookie Commemorative Class",
+"base": false
+},
+{
+"name": "Sizzle Reel",
+"base": false
+},
+{
+"name": "Sophomore Sensations",
+"base": false
+},
+{
+"name": "Stencils",
+"base": false
+},
+{
+"name": "UD Canvas",
+"base": false
+},
+{
+"name": "UD Canvas Young Guns",
+"base": false
+},
+{
+"name": "UD Portraits",
+"base": false
+},
+{
+"name": "Vibe Check",
+"base": false
+},
+{
+"name": "Youthful Spirit",
+"base": false
+}
+],
+"source": {
+"name": "Checklist Insider",
+"url": "https://www.checklistinsider.com/2026-27-upper-deck-series-1-hockey"
+},
+"priceSource": null,
+"fetched": "2026-11-26"
+},
+{
+"id": "ho-2025-26-upper-deck-series-2-hockey",
+"cat": "hockey",
+"name": "2025-26 Upper Deck Series 2 Hockey",
+"release": "2026-03-04",
+"total": 1000,
+"official": 250,
+"subsets": [
+{
+"name": "Base",
+"base": true
+},
+{
+"name": "Base Young Guns",
+"base": true
+},
+{
+"name": "Base Swagnificent Variation",
+"base": false
+},
+{
+"name": "Base Oversized Young Guns",
+"base": false
+},
+{
+"name": "1994-95 Rookie Die-Cuts",
+"base": false
+},
+{
+"name": "Boomtown",
+"base": false
+},
+{
+"name": "Day With The Cup",
+"base": false
+},
+{
+"name": "Dazzlers",
+"base": false
+},
+{
+"name": "Encore",
+"base": false
+},
+{
+"name": "Fanimation",
+"base": false
+},
+{
+"name": "Fluorescence",
+"base": false
+},
+{
+"name": "Glow-Up",
+"base": false
+},
+{
+"name": "Incarnations",
+"base": false
+},
+{
+"name": "IYKYK",
+"base": false
+},
+{
+"name": "Let Them Cook",
+"base": false
+},
+{
+"name": "NHL Firsts",
+"base": false
+},
+{
+"name": "NHL Firsts Achievement",
+"base": false
+},
+{
+"name": "O-Pee-Chee Glossy",
+"base": false
+},
+{
+"name": "Outburst Retro Young Guns",
+"base": false
+},
+{
+"name": "Population Count",
+"base": false
+},
+{
+"name": "Retro Young Guns Achievements",
+"base": false
+},
+{
+"name": "Rookie Class Commemorations",
+"base": false
+},
+{
+"name": "Sizzle Reel",
+"base": false
+},
+{
+"name": "Slaps",
+"base": false
+},
+{
+"name": "UD Canvas",
+"base": false
+},
+{
+"name": "UD Canvas Young Guns",
+"base": false
+},
+{
+"name": "UD Canvas Retired",
+"base": false
+},
+{
+"name": "UD Canvas Program of Excellence",
+"base": false
+},
+{
+"name": "UD Canvas Season Highlights",
+"base": false
+},
+{
+"name": "UD Portraits",
+"base": false
+},
+{
+"name": "Vibing",
+"base": false
+}
+],
+"source": {
+"name": "Checklist Insider",
+"url": "https://www.checklistinsider.com/2025-26-upper-deck-series-2-hockey"
+},
+"priceSource": null,
+"fetched": "2026-11-26"
+},
+{
+"id": "ho-2025-26-upper-deck-series-1-hockey",
+"cat": "hockey",
+"name": "2025-26 Upper Deck Series 1 Hockey",
+"release": null,
+"total": 918,
+"official": 250,
+"subsets": [
+{
+"name": "Base",
+"base": true
+},
+{
+"name": "Base Young Guns",
+"base": true
+},
+{
+"name": "Base Swagnificent Variations",
+"base": false
+},
+{
+"name": "Base Young Guns Oversized",
+"base": false
+},
+{
+"name": "1994-95 Rookie Die-Cuts",
+"base": false
+},
+{
+"name": "2025-26 Retro Young Guns Achievements",
+"base": false
+},
+{
+"name": "Bootlegs",
+"base": false
+},
+{
+"name": "Bustle",
+"base": false
+},
+{
+"name": "Compadres",
+"base": false
+},
+{
+"name": "Compositions",
+"base": false
+},
+{
+"name": "Cup Quest",
+"base": false
+},
+{
+"name": "Dazzlers",
+"base": false
+},
+{
+"name": "Encore",
+"base": false
+},
+{
+"name": "Fanimation",
+"base": false
+},
+{
+"name": "Goal Oriented",
+"base": false
+},
+{
+"name": "Holotypes",
+"base": false
+},
+{
+"name": "O-Pee-Chee Glossy",
+"base": false
+},
+{
+"name": "Outburst Retro Young Guns",
+"base": false
+},
+{
+"name": "Population Count",
+"base": false
+},
+{
+"name": "Rookie Commemorative Class",
+"base": false
+},
+{
+"name": "Sizzle Reel",
+"base": false
+},
+{
+"name": "Sophomore Sensations",
+"base": false
+},
+{
+"name": "Tracking Systems",
+"base": false
+},
+{
+"name": "UD Canvas",
+"base": false
+},
+{
+"name": "UD Canvas Young Guns",
+"base": false
+},
+{
+"name": "UD Canvas Season Highlights Achievements",
+"base": false
+},
+{
+"name": "UD Portraits",
+"base": false
+}
+],
+"source": {
+"name": "Checklist Insider",
+"url": "https://www.checklistinsider.com/2025-26-upper-deck-series-1-hockey"
+},
+"priceSource": null,
+"fetched": "2026-11-26"
+},
+{
+"id": "ho-2024-25-upper-deck-series-1-hockey",
+"cat": "hockey",
+"name": "2024-25 Upper Deck Series 1 Hockey",
+"release": null,
+"total": 925,
+"official": 250,
+"subsets": [
+{
+"name": "Base",
+"base": true
+},
+{
+"name": "Base Swagnificent",
+"base": false
+},
+{
+"name": "Base Young Guns",
+"base": true
+},
+{
+"name": "Base Oversized Young Guns",
+"base": false
+},
+{
+"name": "1994-95 Rookie Die-Cuts",
+"base": false
+},
+{
+"name": "Aimbots",
+"base": false
+},
+{
+"name": "A-Lines",
+"base": false
+},
+{
+"name": "Breaking News",
+"base": false
+},
+{
+"name": "Checkpoint",
+"base": false
+},
+{
+"name": "City Satellites",
+"base": false
+},
+{
+"name": "Crossed Up",
+"base": false
+},
+{
+"name": "Dazzlers",
+"base": false
+},
+{
+"name": "Fanimation",
+"base": false
+},
+{
+"name": "Gaming Co-Op",
+"base": false
+},
+{
+"name": "Gaming FOV",
+"base": false
+},
+{
+"name": "Gaming PVP",
+"base": false
+},
+{
+"name": "Gaming XP",
+"base": false
+},
+{
+"name": "Holotypes",
+"base": false
+},
+{
+"name": "O-Pee-Chee Glossy",
+"base": false
+},
+{
+"name": "Outburst Retro Young Guns",
+"base": false
+},
+{
+"name": "Population Count",
+"base": false
+},
+{
+"name": "Rookie Commemorative Class",
+"base": false
+},
+{
+"name": "Sophomore Sensations",
+"base": false
+},
+{
+"name": "UD Canvas",
+"base": false
+},
+{
+"name": "UD Canvas Young Guns",
+"base": false
+},
+{
+"name": "UD Canvas Season Highlights Achievements",
+"base": false
+},
+{
+"name": "UD Portraits",
+"base": false
+},
+{
+"name": "Young Guns Achievement",
+"base": false
+},
+{
+"name": "Young Guns Renewed",
+"base": false
+}
+],
+"source": {
+"name": "Checklist Insider",
+"url": "https://www.checklistinsider.com/2024-25-upper-deck-series-1-hockey"
+},
+"priceSource": null,
+"fetched": "2026-11-26"
+}
+]

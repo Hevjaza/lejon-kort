@@ -1,0 +1,1064 @@
+[
+{
+"id": "op-OP-01",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "OP-01",
+"apiKind": "set",
+"name": "OP-01 Romance Dawn",
+"series": "Booster",
+"total": 154,
+"official": 121,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-26",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-OP-02",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "OP-02",
+"apiKind": "set",
+"name": "OP-02 Paramount War",
+"series": "Booster",
+"total": 154,
+"official": 121,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-26",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-OP-03",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "OP-03",
+"apiKind": "set",
+"name": "OP-03 Pillars of Strength",
+"series": "Booster",
+"total": 154,
+"official": 123,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-26",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-OP-04",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "OP-04",
+"apiKind": "set",
+"name": "OP-04 Kingdoms of Intrigue",
+"series": "Booster",
+"total": 155,
+"official": 120,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-26",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-OP-05",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "OP-05",
+"apiKind": "set",
+"name": "OP-05 Awakening of the New Era",
+"series": "Booster",
+"total": 154,
+"official": 119,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-26",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-OP-06",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "OP-06",
+"apiKind": "set",
+"name": "OP-06 Wings of the Captain",
+"series": "Booster",
+"total": 151,
+"official": 119,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-26",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-OP-07",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "OP-07",
+"apiKind": "set",
+"name": "OP-07 500 Years in the Future",
+"series": "Booster",
+"total": 151,
+"official": 119,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-26",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-EB-01",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "EB-01",
+"apiKind": "set",
+"name": "EB-01 Extra Booster: Memorial Collection",
+"series": "Extra Booster",
+"total": 80,
+"official": 61,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-26",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-OP-08",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "OP-08",
+"apiKind": "set",
+"name": "OP-08 Two Legends",
+"series": "Booster",
+"total": 151,
+"official": 119,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-26",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-OP-09",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "OP-09",
+"apiKind": "set",
+"name": "OP-09 Emperors in the New World",
+"series": "Booster",
+"total": 159,
+"official": 119,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-26",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-OP-10",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "OP-10",
+"apiKind": "set",
+"name": "OP-10 Royal Blood",
+"series": "Booster",
+"total": 151,
+"official": 119,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-26",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-OP-11",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "OP-11",
+"apiKind": "set",
+"name": "OP-11 A Fist of Divine Speed",
+"series": "Booster",
+"total": 156,
+"official": 119,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-26",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-EB-02",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "EB-02",
+"apiKind": "set",
+"name": "EB-02 Extra Booster: Anime 25th Collection",
+"series": "Extra Booster",
+"total": 105,
+"official": 61,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-26",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-OP-12",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "OP-12",
+"apiKind": "set",
+"name": "OP-12 Legacy of the Master",
+"series": "Booster",
+"total": 155,
+"official": 120,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-26",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-PRB-01",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "PRB-01",
+"apiKind": "set",
+"name": "PRB-01 Premium Booster - The Best",
+"series": "Premium Booster",
+"total": 309,
+"official": 99,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-26",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-PRB-02",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "PRB-02",
+"apiKind": "set",
+"name": "PRB-02 Premium Booster - The Best - Vol. 2",
+"series": "Premium Booster",
+"total": 304,
+"official": 173,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-OP-13",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "OP-13",
+"apiKind": "set",
+"name": "OP-13 Carrying On His Will",
+"series": "Booster",
+"total": 173,
+"official": 119,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-26",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-OP14-EB04",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "OP14-EB04",
+"apiKind": "set",
+"name": "OP14-EB04 The Azure Sea's Seven",
+"series": "Booster",
+"total": 198,
+"official": 151,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-26",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-EB-03",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "EB-03",
+"apiKind": "set",
+"name": "EB-03 Extra Booster: One Piece Heroines Edition",
+"series": "Extra Booster",
+"total": 94,
+"official": 63,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-26",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-OP15-EB04",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "OP15-EB04",
+"apiKind": "set",
+"name": "OP15-EB04 Adventure on Kami's Island",
+"series": "Booster",
+"total": 196,
+"official": 149,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-26",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-OP-16",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "OP-16",
+"apiKind": "set",
+"name": "OP-16 The Time of Battle",
+"series": "Booster",
+"total": 153,
+"official": 119,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-26",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-OP-17",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "OP-17",
+"apiKind": "set",
+"name": "OP-17 The World's Strongest Warriors",
+"series": "Booster",
+"total": 161,
+"official": 119,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-26",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-EB-05",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "EB-05",
+"apiKind": "set",
+"name": "EB-05 Extra Booster: One Piece Heroines Edition Vol. 2",
+"series": "Extra Booster",
+"total": 87,
+"official": 62,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-26",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-01",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-01",
+"apiKind": "deck",
+"name": "ST-01 Starter Deck 1: Straw Hat Crew",
+"series": "Starter Decks",
+"total": 17,
+"official": 17,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-26",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-02",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-02",
+"apiKind": "deck",
+"name": "ST-02 Starter Deck 2: Worst Generation",
+"series": "Starter Decks",
+"total": 17,
+"official": 17,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-26",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-03",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-03",
+"apiKind": "deck",
+"name": "ST-03 Starter Deck 3: The Seven Warlords of The Sea",
+"series": "Starter Decks",
+"total": 17,
+"official": 17,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-23",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-04",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-04",
+"apiKind": "deck",
+"name": "ST-04 Starter Deck 4: Animal Kingdom Pirates",
+"series": "Starter Decks",
+"total": 17,
+"official": 17,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-24",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-05",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-05",
+"apiKind": "deck",
+"name": "ST-05 Starter Deck 5: Film Edition",
+"series": "Starter Decks",
+"total": 17,
+"official": 17,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-09-29",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-06",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-06",
+"apiKind": "deck",
+"name": "ST-06 Starter Deck 6: Absolute Justice",
+"series": "Starter Decks",
+"total": 17,
+"official": 17,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-01",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-07",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-07",
+"apiKind": "deck",
+"name": "ST-07 Starter Deck 7: Big Mom Pirates",
+"series": "Starter Decks",
+"total": 17,
+"official": 17,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-26",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-08",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-08",
+"apiKind": "deck",
+"name": "ST-08 Starter Deck 8: Monkey.D.Luffy",
+"series": "Starter Decks",
+"total": 15,
+"official": 15,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-21",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-09",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-09",
+"apiKind": "deck",
+"name": "ST-09 Starter Deck 9: Yamato",
+"series": "Starter Decks",
+"total": 15,
+"official": 15,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-09-29",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-10",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-10",
+"apiKind": "deck",
+"name": "ST-10 Ultra Deck: The Three Captains",
+"series": "Starter Decks",
+"total": 17,
+"official": 17,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-09-29",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-11",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-11",
+"apiKind": "deck",
+"name": "ST-11 Starter Deck 11: Uta",
+"series": "Starter Decks",
+"total": 5,
+"official": 5,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-01-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-12",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-12",
+"apiKind": "deck",
+"name": "ST-12 Starter Deck 12: Zoro and Sanji",
+"series": "Starter Decks",
+"total": 17,
+"official": 17,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-26",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-13",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-13",
+"apiKind": "deck",
+"name": "ST-13 Ultra Deck: The Three Brothers",
+"series": "Starter Decks",
+"total": 35,
+"official": 19,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-14",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-14",
+"apiKind": "deck",
+"name": "ST-14 Starter Deck 14: 3D2Y",
+"series": "Starter Decks",
+"total": 17,
+"official": 17,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-26",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-15",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-15",
+"apiKind": "deck",
+"name": "ST-15 Starter Deck 15: RED Edward.Newgate",
+"series": "Starter Decks",
+"total": 13,
+"official": 12,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-09-29",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-16",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-16",
+"apiKind": "deck",
+"name": "ST-16 Starter Deck 16: GREEN Uta",
+"series": "Starter Decks",
+"total": 15,
+"official": 7,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-09-29",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-17",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-17",
+"apiKind": "deck",
+"name": "ST-17 Starter Deck 17: BLUE Donquixote Doflamingo",
+"series": "Starter Decks",
+"total": 10,
+"official": 9,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-01-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-18",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-18",
+"apiKind": "deck",
+"name": "ST-18 Starter Deck 18: PURPLE Monkey.D.Luffy",
+"series": "Starter Decks",
+"total": 15,
+"official": 13,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-09-29",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-19",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-19",
+"apiKind": "deck",
+"name": "ST-19 Starter Deck 19: BLACK Smoker",
+"series": "Starter Decks",
+"total": 14,
+"official": 13,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-01",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-20",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-20",
+"apiKind": "deck",
+"name": "ST-20 Starter Deck 20: YELLOW Charlotte Katakuri",
+"series": "Starter Decks",
+"total": 11,
+"official": 10,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-09-29",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-21",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-21",
+"apiKind": "deck",
+"name": "ST-21 Starter Deck EX: Gear 5",
+"series": "Starter Decks",
+"total": 32,
+"official": 17,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-26",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-22",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-22",
+"apiKind": "deck",
+"name": "ST-22 Starter Deck 22: Ace & Newgate",
+"series": "Starter Decks",
+"total": 31,
+"official": 17,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-09-29",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-23",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-23",
+"apiKind": "deck",
+"name": "ST-23 Starter Deck 23: RED Shanks",
+"series": "Starter Decks",
+"total": 15,
+"official": 14,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-10-09",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-24",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-24",
+"apiKind": "deck",
+"name": "ST-24 Starter Deck 24: GREEN Jewelry Bonney",
+"series": "Starter Decks",
+"total": 15,
+"official": 12,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-09-29",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-25",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-25",
+"apiKind": "deck",
+"name": "ST-25 Starter Deck 25: BLUE Buggy",
+"series": "Starter Decks",
+"total": 14,
+"official": 13,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-26",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-26",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-26",
+"apiKind": "deck",
+"name": "ST-26 Starter Deck 26: PURPLE/BLACK Monkey.D.Luffy",
+"series": "Starter Decks",
+"total": 15,
+"official": 13,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-26",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-27",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-27",
+"apiKind": "deck",
+"name": "ST-27 Starter Deck 27: BLACK Marshall.D.Teach",
+"series": "Starter Decks",
+"total": 15,
+"official": 14,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-09-29",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-28",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-28",
+"apiKind": "deck",
+"name": "ST-28 Starter Deck 28: GREEN/YELLOW Yamato",
+"series": "Starter Decks",
+"total": 15,
+"official": 13,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-26",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-29",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-29",
+"apiKind": "deck",
+"name": "ST-29 Starter Deck 29: Egghead",
+"series": "Starter Decks",
+"total": 30,
+"official": 17,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-26",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-30",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-30",
+"apiKind": "deck",
+"name": "ST-30 Starter Deck EX: Luffy & Ace",
+"series": "Starter Decks",
+"total": 34,
+"official": 17,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-25",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-31",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-31",
+"apiKind": "deck",
+"name": "ST-31 Starter Deck 31: RED Monkey.D.Luffy",
+"series": "Starter Decks",
+"total": 14,
+"official": 12,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-26",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-32",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-32",
+"apiKind": "deck",
+"name": "ST-32 Starter Deck 32: GREEN Roronoa Zoro",
+"series": "Starter Decks",
+"total": 15,
+"official": 13,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-10",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-33",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-33",
+"apiKind": "deck",
+"name": "ST-33 Starter Deck 33: BLUE Kuzan",
+"series": "Starter Decks",
+"total": 14,
+"official": 12,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-01",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-34",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-34",
+"apiKind": "deck",
+"name": "ST-34 Starter Deck 34: PURPLE Charlotte Katakuri",
+"series": "Starter Decks",
+"total": 15,
+"official": 14,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-26",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-35",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-35",
+"apiKind": "deck",
+"name": "ST-35 Starter Deck 35: RED/BLACK Sabo",
+"series": "Starter Decks",
+"total": 15,
+"official": 13,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-08-16",
+"fetched": "2026-11-26"
+},
+{
+"id": "op-ST-36",
+"cat": "onepiece",
+"api": "optcg",
+"apiId": "ST-36",
+"apiKind": "deck",
+"name": "ST-36 Starter Deck 36: YELLOW Eustass\"Captain\"Kid",
+"series": "Starter Decks",
+"total": 15,
+"official": 14,
+"source": {
+"name": "OPTCG API",
+"url": "https://optcgapi.com"
+},
+"priceSource": "Marknadspris (USD) via OPTCG API",
+"priceDate": "2026-11-26",
+"fetched": "2026-11-26"
+}
+]

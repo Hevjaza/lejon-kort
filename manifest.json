@@ -1,0 +1,16 @@
+{
+  "name": "Lejon Kort – samlarkort & Masterset",
+  "short_name": "Lejon Kort",
+  "description": "Samla Pokémon, One Piece, fotbolls-, basket- och hockeykort med set, Masterset och priser.",
+  "lang": "sv-SE",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b0f18",
+  "theme_color": "#0b0f18",
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
+  ]
+}

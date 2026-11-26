@@ -216,7 +216,7 @@ const ikey = (cardId, variant, jpOp) => cardId + '|' + variant + (jpOp ? '|ja' :
 function curLang(set) { if (!set) return 'en'; if (set.cat === 'pokemon') return set.lang === 'ja' ? 'ja' : 'en'; if (set.cat === 'onepiece') return S.oplang; return 'en'; }
 const isJpOp = set => set && set.cat === 'onepiece' && S.oplang === 'ja';
 const pmeta = set => isJpOp(set) ? Object.assign({}, set, { jp: 1 }) : set;
-function snapOf(card, set) { return { code: set.cat === 'onepiece' ? (card.base || card.n) : (set.lang === 'ja' ? set.apiId : null), off: set.official || null, name: card.name, n: card.n, img: card.img || null, setName: set.name, team: card.team || null, r: card.r || null, sub: set.subsets && card.sub != null ? set.subsets[card.sub].name : null }; }
+function snapOf(card, set) { return { code: set.cat === 'onepiece' ? (card.base || card.n) : (set.lang === 'ja' ? set.apiId : null), off: set.official || null, name: card.name, n: card.n, img: card.img || null, imgf: card.imgf || null, setName: set.name, team: card.team || null, r: card.r || null, sub: set.subsets && card.sub != null ? set.subsets[card.sub].name : null }; }
 async function setQty(card, set, variant, qty, lang = curLang(set)) {
   const k = ikey(card.id, variant, set.cat === 'onepiece' && lang === 'ja'); let it = S.items.get(k);
   if (qty <= 0) { if (it) { if (it.photo) await DB.del('photos', it.photo).catch(() => { }); S.items.delete(k); await DB.del('items', k); } }
@@ -273,7 +273,10 @@ function toast(msg, undo) {
 }
 function imgErr(img) { const d = document.createElement('div'); d.className = 'phd ' + (img.dataset.cat || ''); d.innerHTML = '<b>🃏</b>Ingen bild'; img.replaceWith(d); }
 function imgTag(src, cat) { return `<img loading="lazy" decoding="async" src="${esc(src)}" data-cat="${esc(cat)}" alt="" onerror="imgErr(this)">`; }
+const LIMJP = (code, n) => `https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/tpc/${code}/${code}_${String(n).replace(/^0+(?=\d)/, '')}_R_JP_SM.png`;
 function cardImgSrc(card, set, hi) {
+  if (card.imgf) return hi ? card.imgf.replace('_SM.', '_LG.') : card.imgf; // reservbild (Limitless TCG / pokemontcg.io)
+  if (!card.img && set && set.lang === 'ja' && set.live && set.apiId && card.n) return hi ? LIMJP(set.apiId, card.n).replace('_SM.', '_LG.') : LIMJP(set.apiId, card.n);
   if (!card.img) return null;
   if (set.cat === 'pokemon') return card.img + (hi ? '/high.webp' : '/low.webp');
   return card.img;
@@ -363,7 +366,8 @@ function gBadge(id) {
 function gradeChip(it) { if (!it.graded) return '<span class="chip">Ogradat</span>'; return `<span class="chip ${it.gco === 'PSA' ? 'y' : 'b'}">🏅 ${esc(gLabel(it))}</span>`; }
 function itemThumb(it) {
   const s = it.snap || {};
-  const src = it.photoThumb || (s.img ? (it.cat === 'pokemon' ? s.img + '/low.webp' : s.img) : null);
+  const set = S.sets[it.setId]; const card = set && set.byId && set.byId.get(it.cardId);
+  const src = it.photoThumb || (card ? cardImgSrc(card, set) : null) || s.imgf || (s.img ? (it.cat === 'pokemon' ? s.img + '/low.webp' : s.img) : null);
   return `<div class="th">${src ? imgTag(src, it.cat) : `<div class="phd ${it.cat}"><b>${esc(CAT[it.cat] ? CAT[it.cat].em : '')}</b>#${esc(s.n || '')}</div>`}</div>`;
 }
 function itemLi(it, val) {
@@ -431,7 +435,7 @@ async function vSetDetail() {
    ${progBar(set.subsets ? 'Grundset (bas)' : set.cat === 'onepiece' ? 'Grundset (utan alt-art)' : 'Grundset (ett av varje kort)', pB)}
    ${progBar(mLabel, pM, 'm')}
    <div class="mtog"><button data-mode="basic" class="${mode === 'basic' ? 'on' : ''}">Grundset</button><button data-mode="master" class="${mode === 'master' ? 'on' : ''}">Masterset</button>${set.subsets ? `<button data-act="pars">Paralleller (${(cf.par || []).length})</button>` : ''}</div>
-   <div class="muted src" style="margin-top:8px">Checklista: ${src}${set.fetched ? ' · hämtad ' + fmtDate(set.fetched) : ''}${priceInfo ? '<br>' + priceInfo : ''}</div>
+   <div class="muted src" style="margin-top:8px">Checklista: ${src}${set.fetched ? ' · hämtad ' + fmtDate(set.fetched) : ''}${priceInfo ? '<br>' + priceInfo : ''}${set.cards.some(c => c.imgf) ? '<br>Bilder: TCGdex + reservbilder från Limitless TCG / pokemontcg.io' : ''}</div>
    ${set.live && set.cards.some(c => c.unk) ? `<button class="btn sm full" style="margin-top:8px" data-act="livefill">Hämta varianter &amp; priser för hela setet</button>` : ''}
    ${set.custom ? `<div class="btns" style="margin-top:8px"><button class="btn sm" data-act="addtoset">+ Lägg till kort i setet</button><button class="btn sm red" data-act="delset">Ta bort set</button></div>` : ''}
   </div>`;

@@ -1,8 +1,8 @@
 // Lejon Kort service worker
 // App-skal: nätverk först (alltid senaste versionen), cache som reserv offline.
 // Setdata (data/): visa cache direkt och uppdatera i bakgrunden.
-const CACHE = 'lejon-kort-v2';
-const SHELL = ['./', './index.html', './style.css?v=2', './scanner.js?v=2', './app.js?v=2', './manifest.json', './icon-192.png', './apple-touch-icon.png', './data/index.json'];
+const CACHE = 'lejon-kort-v3';
+const SHELL = ['./', './index.html', './style.css?v=3', './scanner.js?v=3', './app.js?v=3', './manifest.json', './icon-192.png', './apple-touch-icon.png', './data/index.json'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(k => Promise.all(k.filter(x => x !== CACHE).map(x => caches.delete(x)))).then(() => self.clients.claim())); });
 self.addEventListener('fetch', e => {

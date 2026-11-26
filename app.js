@@ -182,6 +182,7 @@ async function loadItems() {
   S.setcfg = await kvGet('setcfg', {});
   S.customSets = await kvGet('customSets', []);
   S.pxl = await kvGet('pxl', {});
+  S.cphoto = await kvGet('cphoto', {});
 }
 // v1 → v2: graderade kort blir egna exemplar (Ogradat och Graderat kan finnas samtidigt)
 function migrateItem(it) {
@@ -281,6 +282,22 @@ function cardImgSrc(card, set, hi) {
   if (set.cat === 'pokemon') return card.img + (hi ? '/high.webp' : '/low.webp');
   return card.img;
 }
+const SPORTEM = { fotboll: '⚽', basket: '🏀', hockey: '🏒', pokemon: '⚡', onepiece: '🏴‍☠️' };
+// Accentfärg per lag (bara en stabil färg för att skilja lag åt – inte lagets officiella färger)
+function teamHue(t) { let h = 0; for (const ch of String(t || '')) h = (h * 31 + ch.charCodeAt(0)) % 360; return h; }
+function sportBadge(card, set, mini) {
+  const cat = set ? set.cat : card.cat; const sub = set && set.subsets && set.subsets[card.sub];
+  const yr = set ? (String(set.name).match(/\b(19|20)\d{2}([-/]\d{2})?\b/) || [''])[0] : '';
+  const brand = set ? String(set.name).replace(yr, '').replace(/\s*(Basketball|Hockey|Soccer|Football)\b/i, '').replace(/\s{2,}/g, ' ').trim() : '';
+  const hue = teamHue(card.team || card.name);
+  if (mini) return `<div class="sbadge mini ${esc(cat)}" style="--th:${hue}"><i>${SPORTEM[cat] || '🃏'}</i><b>#${esc(card.n || '')}</b></div>`;
+  return `<div class="sbadge ${esc(cat)}" style="--th:${hue}"><div class="sbt"><span>${SPORTEM[cat] || '🃏'} ${esc(yr)}</span><span>#${esc(card.n || '')}</span></div>
+   <div class="sbm"><div class="sbn">${esc(card.name || '')}</div>${card.team ? `<div class="sbteam">${esc(card.team)}</div>` : ''}${card.rc ? '<span class="pill rc">RC</span>' : ''}${sub && !sub.base ? `<div class="sbsub">${esc(sub.name)}</div>` : ''}</div>
+   <div class="sbf">${esc(brand)}</div></div>`;
+}
+const isSport = cat => cat === 'fotboll' || cat === 'basket' || cat === 'hockey';
+function cardPhotoThumb(id) { return S.cphoto && S.cphoto[id] || null; }
+function imgSearchQ(card, set) { const sub = set.subsets && set.subsets[card.sub]; return [set.name, card.name, '#' + card.n, sub && !sub.base ? sub.name : ''].filter(Boolean).join(' '); }
 function placeholder(card, cat) { return `<div class="phd ${cat}"><b>#${esc(card.n || '')}</b>${esc((card.name || '').slice(0, 40))}</div>`; }
 const pctTxt = p => String(p).replace('.', ',');
 function progBar(label, p, cls = '') { return `<div class="prog"><div class="t"><b>${label}</b><span>${p.have} / ${p.tot} kort · ${pctTxt(p.pct)} %</span></div><div class="bar ${cls}"><i style="width:${Math.min(100, p.pct)}%"></i></div></div>`; }
@@ -367,8 +384,8 @@ function gradeChip(it) { if (!it.graded) return '<span class="chip">Ogradat</spa
 function itemThumb(it) {
   const s = it.snap || {};
   const set = S.sets[it.setId]; const card = set && set.byId && set.byId.get(it.cardId);
-  const src = it.photoThumb || (card ? cardImgSrc(card, set) : null) || s.imgf || (s.img ? (it.cat === 'pokemon' ? s.img + '/low.webp' : s.img) : null);
-  return `<div class="th">${src ? imgTag(src, it.cat) : `<div class="phd ${it.cat}"><b>${esc(CAT[it.cat] ? CAT[it.cat].em : '')}</b>#${esc(s.n || '')}</div>`}</div>`;
+  const src = it.photoThumb || (card ? cardImgSrc(card, set) : null) || cardPhotoThumb(it.cardId) || s.imgf || (s.img ? (it.cat === 'pokemon' ? s.img + '/low.webp' : s.img) : null);
+  return `<div class="th">${src ? imgTag(src, it.cat) : sportBadge(card || { n: s.n, name: s.name, team: s.team, cat: it.cat }, set || { cat: it.cat, name: s.setName || '' }, true)}</div>`;
 }
 function itemLi(it, val) {
   const s = it.snap || {};
@@ -462,12 +479,13 @@ function cardTile(c, set, mode) {
    ${vs.length > 1 ? `<div class="vd">${vs.map(v => `<i class="${hasV(c.id, v) ? 'on' : ''}" title="${VLABEL[v] || v}"></i>`).join('')}</div>` : ''}</div>`;
 }
 function sportRow(c, set, mode) {
+  const cp = cardPhotoThumb(c.id);
   const o = S.owned.get(c.id); const dv = defaultVariant(c, set); const has = o && o.has(dv);
   const sub = set.subsets && set.subsets[c.sub];
   const extra = o ? [...o.keys()].filter(v => v !== dv) : [];
   const vs = cardVariants(c, set, mode);
   const val = o ? [...o.values()].map(itemValue).filter(Boolean).reduce((a, b) => a + b.v, 0) : 0;
-  return `<div class="srow"><span class="n">#${esc(c.n)}</span><div class="mid" data-card="${esc(c.id)}"><b>${esc(c.name)} ${c.rc ? '<span class="pill rc">RC</span>' : ''} ${S.favs.has(c.id) ? '⭐' : ''}</b>
+  return `<div class="srow"><div class="sth" data-card="${esc(c.id)}">${cp ? `<img src="${esc(cp)}" alt="">` : sportBadge(c, set, true)}</div><div class="mid" data-card="${esc(c.id)}"><b>${esc(c.name)} ${c.rc ? '<span class="pill rc">RC</span>' : ''} ${S.favs.has(c.id) ? '⭐' : ''}</b>
    <div class="muted">${esc(c.team || '')}${sub && !sub.base ? ' · ' + esc(sub.name) : ''}${extra.length ? ' · <span style="color:var(--grn)">+' + extra.length + ' parallell</span>' : ''}${val ? ' · Ogradat ' + money(val) : ''}</div>${gBadge(c.id)}
    ${vs && vs.length > 1 ? `<div class="vd">${vs.map(v => `<i class="${hasV(c.id, v) ? 'on' : ''}"></i>`).join('')}</div>` : ''}</div>
    <button class="chk ${has ? 'on' : ''}" data-quick="${esc(c.id)}" aria-label="Bocka av ${esc(c.name)}">${has ? '✓' : ''}</button></div>`;
@@ -614,7 +632,15 @@ function renderCardSheet(keepScroll) {
   const src = cardImgSrc(card, set, true); const sub = set.subsets && set.subsets[card.sub];
   const p = livePrice(card) || card.p || {};
   const rawN = [...o.values()].reduce((a, b) => a + b.qty, 0);
-  let h = `<div class="bigimg ${src ? '' : 'sm'}">${src ? imgTag(src, set.cat) : placeholder(card, set.cat)}</div>
+  const cph = !src && cardPhotoThumb(card.id); let h;
+  if (src) h = `<div class="bigimg">${imgTag(src, set.cat)}</div>`;
+  else {
+    const iq = encodeURIComponent(imgSearchQ(card, set));
+    h = `<div class="bigimg ${cph ? '' : 'badge'}">${cph ? `<img data-ph="cp-${esc(card.id)}" src="${esc(cph)}" alt="">` : sportBadge(card, set)}</div>
+    <div class="imgbtns"><label class="btn sm pri">📷 ${cph ? 'Byt bild' : 'Fota / lägg till bild'}<input type="file" accept="image/*" capture="environment" hidden id="cardphoto"></label>${cph ? `<button class="btn sm red" data-act="delcardphoto" aria-label="Ta bort bild">✕</button>` : ''}</div>
+    <div class="imglinks">🔍 Se bild: <a href="https://www.google.com/search?tbm=isch&q=${iq}" target="_blank" rel="noopener">Google Bilder</a> · <a href="https://www.ebay.com/sch/i.html?_nkw=${iq}" target="_blank" rel="noopener">eBay</a></div>`;
+  }
+  h += `
   <div class="row"><div style="min-width:0"><h3 style="font-size:19px">${esc(card.name)} ${card.rc ? '<span class="pill rc">RC</span>' : ''}</h3>
    <div class="muted">${esc(set.name)} · #${esc(card.n)}${card.r ? ' · ' + esc(card.r) : ''}${card.team ? ' · ' + esc(card.team) : ''}${sub && !sub.base ? ' · ' + esc(sub.name) : ''}</div></div>
    <button class="btn sm" data-act="fav" style="flex-shrink:0">${S.favs.has(cardId) ? '⭐ Favorit' : '☆ Favorit'}</button></div>
@@ -833,7 +859,7 @@ async function pool(list, n, fn, onStep) {
 async function doExport() {
   const photoKeys = await DB.keys('photos').catch(() => []);
   const photos = {}; for (const k of photoKeys) photos[k] = await DB.get('photos', k);
-  const data = { app: 'lejon-kort', version: 2, exported: new Date().toISOString(), items: [...S.items.values()], favs: [...S.favs], setcfg: S.setcfg, customSets: S.customSets.map(x => { const { byId, ...r } = x; return r; }), settings: { cur: S.cur, pklang: S.pklang, oplang: S.oplang }, photos };
+  const data = { app: 'lejon-kort', version: 2, exported: new Date().toISOString(), items: [...S.items.values()], favs: [...S.favs], setcfg: S.setcfg, customSets: S.customSets.map(x => { const { byId, ...r } = x; return r; }), settings: { cur: S.cur, pklang: S.pklang, oplang: S.oplang }, cphoto: S.cphoto, photos };
   const blob = new Blob([JSON.stringify(data)], { type: 'application/json' });
   const fname = `lejon-kort-backup-${new Date().toISOString().slice(0, 10)}.json`;
   try {
@@ -853,6 +879,7 @@ async function doImport(file) {
   for (const [k, v] of Object.entries(data.photos || {})) await DB.put('photos', v, k);
   S.favs = new Set([...(replace ? [] : S.favs), ...(data.favs || [])]); await kvSet('favs', [...S.favs]);
   S.setcfg = Object.assign(replace ? {} : S.setcfg, data.setcfg || {}); await kvSet('setcfg', S.setcfg);
+  S.cphoto = Object.assign(replace ? {} : S.cphoto, data.cphoto || {}); await kvSet('cphoto', S.cphoto);
   const ids = new Set(S.customSets.map(x => x.id));
   S.customSets = (replace ? [] : S.customSets).concat((data.customSets || []).filter(x => replace || !ids.has(x.id)));
   for (const k of Object.keys(S.sets)) if (k.startsWith('cs-')) delete S.sets[k];
@@ -880,6 +907,7 @@ async function gradedSubmit(form) {
 const curSheetCard = () => { const { cardId, setId } = S.sheet; const set = S.sets[setId]; return { set, card: set.byId.get(cardId) }; };
 const ACTIONS = {
   close() { closeSheet(); },
+  async delcardphoto() { if (!confirm('Ta bort bilden på kortet?')) return; const id = S.sheet.cardId; await DB.del('photos', 'cp-' + id).catch(() => { }); delete S.cphoto[id]; await kvSet('cphoto', S.cphoto); renderCardSheet(true); render(); },
   gnew() { S.sheet.gform = 'new'; S.sheet.gpre = null; renderCardSheet(true); },
   gcancel() { S.sheet.gform = null; S.sheet.gpre = null; S.pendingPhoto = null; renderCardSheet(true); },
   async gdel(t) {
@@ -909,7 +937,7 @@ const ACTIONS = {
   async wipe() {
     if (!confirm('Vill du radera HELA samlingen på den här telefonen? Spara gärna en backup först.')) return;
     if (!confirm('Är du helt säker? Det går inte att ångra.')) return;
-    await DB.clear('items'); await DB.clear('photos'); S.items.clear(); rebuildOwned(); S.favs.clear(); await kvSet('favs', []); toast('Samlingen är raderad'); render();
+    await DB.clear('items'); await DB.clear('photos'); S.items.clear(); rebuildOwned(); S.cphoto = {}; await kvSet('cphoto', {}); S.favs.clear(); await kvSet('favs', []); toast('Samlingen är raderad'); render();
   },
   async allpk() {
     S.showAllPk = true; render(); const jp = S.pklang === 'ja';
@@ -1026,6 +1054,10 @@ document.addEventListener('change', async e => {
     if (el.id === 'colsort') { S.colSort = el.value; render(); return; }
     if (el.id === 'importf' && el.files[0]) { await doImport(el.files[0]); el.value = ''; return; }
     if (el.id === 'addpar' && el.value) { const { set, card } = curSheetCard(); await setQty(card, set, el.value, 1); renderCardSheet(true); render(); return; }
+    if (el.id === 'cardphoto' && el.files[0]) {
+      const id = S.sheet.cardId; const ph = await compressPhoto(el.files[0]); await DB.put('photos', ph.full, 'cp-' + id); S.cphoto[id] = ph.thumb; await kvSet('cphoto', S.cphoto);
+      toast('Bild sparad ✓ – syns i hela appen'); renderCardSheet(true); render(); return;
+    }
     if (el.id === 'gphoto' && el.files[0]) { S.pendingPhoto = await compressPhoto(el.files[0]); const p = $('#gprev'); p.removeAttribute('data-ph'); p.src = S.pendingPhoto.full; p.style.display = 'block'; return; }
     if (el.id === 'cphoto' && el.files[0]) { S.pendingPhoto = await compressPhoto(el.files[0]); const p = $('#cprev'); p.src = S.pendingPhoto.full; p.style.display = 'block'; return; }
     if (el.name === 'cat' && el.closest('#cform')) { const dl = $('#setlist'); if (dl) dl.innerHTML = setsOfCat(el.value).map(m => `<option value="${esc(m.name)}">`).join(''); return; }

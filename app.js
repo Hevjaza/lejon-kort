@@ -74,7 +74,7 @@ const S = {
   cur: LS.get('cur') || 'SEK', fx: null,
   tab: 'oversikt', cat: LS.get('cat') || 'pokemon', setId: null, filter: 'Alla', q: '', sub: -1, showN: 120,
   colQ: '', colCat: 'alla', colGrade: 'alla', colLang: 'alla', colSort: 'value', liveSets: null, liveSetsJa: null, showAllPk: false, sheet: null,
-  pklang: LS.get('pklang') || 'en', oplang: LS.get('oplang') || 'en', scanLang: LS.get('scanLang') || 'auto'
+  pklang: LS.get('pklang') || 'en', autoScan: LS.get('autoScan') !== false, autoSave: LS.get('autoSave') !== false, oplang: LS.get('oplang') || 'en', scanLang: LS.get('scanLang') || 'auto'
 };
 const kvGet = (k, d) => DB.get('kv', k).then(v => v ?? d).catch(() => d);
 const kvSet = (k, v) => DB.put('kv', v, k).catch(() => { });
@@ -182,7 +182,7 @@ async function loadItems() {
   S.setcfg = await kvGet('setcfg', {});
   S.customSets = await kvGet('customSets', []);
   S.pxl = await kvGet('pxl', {});
-  S.cphoto = await kvGet('cphoto', {});
+  S.cphoto = await kvGet('cphoto', {}); S.cphotoSet = await kvGet('cphotoSet', {});
 }
 // v1 → v2: graderade kort blir egna exemplar (Ogradat och Graderat kan finnas samtidigt)
 function migrateItem(it) {
@@ -296,12 +296,33 @@ function sportBadge(card, set, mini) {
    <div class="sbf">${esc(brand)}</div></div>`;
 }
 const isSport = cat => cat === 'fotboll' || cat === 'basket' || cat === 'hockey';
+async function saveCardPhoto(id, setId, ph) {
+  await DB.put('photos', ph.full, 'cp-' + id); S.cphoto[id] = ph.thumb; S.cphotoSet[id] = setId;
+  await kvSet('cphoto', S.cphoto); await kvSet('cphotoSet', S.cphotoSet);
+}
 function cardPhotoThumb(id) { return S.cphoto && S.cphoto[id] || null; }
 function imgSearchQ(card, set) { const sub = set.subsets && set.subsets[card.sub]; return [set.name, card.name, '#' + card.n, sub && !sub.base ? sub.name : ''].filter(Boolean).join(' '); }
 function placeholder(card, cat) { return `<div class="phd ${cat}"><b>#${esc(card.n || '')}</b>${esc((card.name || '').slice(0, 40))}</div>`; }
 const pctTxt = p => String(p).replace('.', ',');
 function progBar(label, p, cls = '') { return `<div class="prog"><div class="t"><b>${label}</b><span>${p.have} / ${p.tot} kort · ${pctTxt(p.pct)} %</span></div><div class="bar ${cls}"><i style="width:${Math.min(100, p.pct)}%"></i></div></div>`; }
+// Bildstatus per set: officiella bilder, delvis, eller "fota själv" + antal egna foton
+function ownPhotoCount(setId) {
+  const ids = new Set();
+  for (const id of Object.keys(S.cphoto || {})) if ((S.cphotoSet || {})[id] === setId || id.startsWith(setId + '-')) ids.add(id);
+  for (const it of S.items.values()) if (it.photo && it.setId === setId) ids.add(it.cardId);
+  return ids.size;
+}
+function imgPill(m) {
+  const own = ownPhotoCount(m.id); const ownP = own ? `<span class="ipill own">📷 ${own} egna</span>` : '';
+  if (m.custom) return `<span class="ipill none">📷 Fota själv</span>${ownP}`;
+  if (m.imgs == null || !m.ncards) return ownP;
+  if (m.imgs >= m.ncards) return `<span class="ipill ok">🖼️ Bilder</span>${ownP}`;
+  if (m.imgs > 0) return `<span class="ipill part">🖼️ ${m.imgs}/${m.ncards} bilder</span>${ownP}`;
+  return `<span class="ipill none">📷 Fota själv</span>${ownP}`;
+}
 function setThumb(m) {
+  if (!m.logo && m.sample) return `<div class="smp"><img loading="lazy" src="${esc(m.sample)}" alt="" onerror="this.parentNode.classList.add('err');this.remove()"></div>`;
+  if (!m.logo && isSport(m.cat)) return `<div class="smp sp ${esc(m.cat)}"><i>${SPORTEM[m.cat]}</i><b>${esc((String(m.name).match(/\b(19|20)\d{2}([-/]\d{2})?/) || [''])[0])}</b></div>`;
   if (m.logo) return `<img class="lg" loading="lazy" src="${esc(m.logo)}.png" alt="" onerror="this.style.visibility='hidden'">`;
   const short = m.apiId || (m.name || '').split(' ').slice(0, 2).join(' ');
   return `<div class="ph">${esc(CAT[m.cat] ? CAT[m.cat].em : '')} ${esc(String(short).slice(0, 12))}</div>`;
@@ -410,7 +431,7 @@ async function vSet() {
     const s = S.sets[m.id]; const p = s ? progress(s, cfgOf(m.id).mode) : null;
     const tot = m.total || (m.cards || []).length;
     const cnt = m.official && tot && m.official !== tot ? `${m.official} bas · ${tot} totalt` : `${tot} kort`;
-    return `<div class="setrow" data-open="${esc(m.id)}">${setThumb(m)}<div class="info"><b>${m.lang === 'ja' ? '🇯🇵 ' : ''}${esc(m.name)}</b><div class="muted">${esc([m.series, m.release ? String(m.release).slice(0, 4) : '', cnt].filter(Boolean).join(' · '))}</div>
+    return `<div class="setrow" data-open="${esc(m.id)}">${setThumb(m)}<div class="info"><b>${m.lang === 'ja' ? '🇯🇵 ' : ''}${esc(m.name)}</b><div class="muted">${esc([m.series, m.release ? String(m.release).slice(0, 4) : '', cnt].filter(Boolean).join(' · '))}</div><div class="ipills">${imgPill(m)}</div>
      ${p && p.have ? `<div class="bar m" style="margin-top:4px"><i style="width:${p.pct}%"></i></div>` : ''}</div>${p && p.have ? `<span class="chip g">${pctTxt(p.pct)}%</span>` : '<span class="muted">›</span>'}</div>`;
   }).join('') || '<div class="empty">Inga set matchar.</div>'}</div>`;
   if (cat === 'pokemon') {
@@ -469,10 +490,10 @@ async function vSetDetail() {
 function cardTile(c, set, mode) {
   const o = S.owned.get(c.id); const own = hasAny(c.id); const dv = defaultVariant(c, set);
   const qty = o ? [...o.values()].reduce((a, b) => a + b.qty, 0) : 0;
-  const src = cardImgSrc(c, set);
+  const src0 = cardImgSrc(c, set); const cph = !src0 && cardPhotoThumb(c.id); const src = src0 || cph;
   const vs = mode === 'master' && set.cat === 'pokemon' ? (c.v || []) : [];
   const mp = marketPrice(c, dv, pmeta(set));
-  return `<div class="ct ${own ? '' : 'miss'}" data-card="${esc(c.id)}"><div class="im">${src ? imgTag(src, set.cat) : placeholder(c, set.cat)}</div>
+  return `<div class="ct ${own ? '' : 'miss'}" data-card="${esc(c.id)}"><div class="im">${src ? imgTag(src, set.cat) : placeholder(c, set.cat)}${cph ? '<span class="ibadge own">📷 Egen bild</span>' : !src ? '<span class="ibadge no">Ingen bild</span>' : ''}</div>
    <button class="chk ${o && o.has(dv) ? 'on' : ''}" data-quick="${esc(c.id)}" aria-label="Bocka av ${esc(c.name)}">${o && o.has(dv) ? '✓' : ''}</button>
    ${qty > 1 ? `<span class="qty">×${qty}</span>` : ''}${S.favs.has(c.id) ? '<span class="fav">⭐</span>' : ''}
    <div class="nm">${esc(c.name)}</div><div class="no"><span>#${esc(c.n)}${c.alt ? ' · alt' : ''}</span><span>${mp ? money(conv(mp.v, mp.c)) : ''}</span></div>${gBadge(c.id)}
@@ -485,7 +506,7 @@ function sportRow(c, set, mode) {
   const extra = o ? [...o.keys()].filter(v => v !== dv) : [];
   const vs = cardVariants(c, set, mode);
   const val = o ? [...o.values()].map(itemValue).filter(Boolean).reduce((a, b) => a + b.v, 0) : 0;
-  return `<div class="srow"><div class="sth" data-card="${esc(c.id)}">${cp ? `<img src="${esc(cp)}" alt="">` : sportBadge(c, set, true)}</div><div class="mid" data-card="${esc(c.id)}"><b>${esc(c.name)} ${c.rc ? '<span class="pill rc">RC</span>' : ''} ${S.favs.has(c.id) ? '⭐' : ''}</b>
+  return `<div class="srow"><div class="sth ${cp ? 'own' : ''}" data-card="${esc(c.id)}">${cp ? `<img src="${esc(cp)}" alt=""><span class="ownd">📷</span>` : sportBadge(c, set, true)}</div><div class="mid" data-card="${esc(c.id)}"><b>${esc(c.name)} ${c.rc ? '<span class="pill rc">RC</span>' : ''} ${S.favs.has(c.id) ? '⭐' : ''}</b>
    <div class="muted">${esc(c.team || '')}${sub && !sub.base ? ' · ' + esc(sub.name) : ''}${extra.length ? ' · <span style="color:var(--grn)">+' + extra.length + ' parallell</span>' : ''}${val ? ' · Ogradat ' + money(val) : ''}</div>${gBadge(c.id)}
    ${vs && vs.length > 1 ? `<div class="vd">${vs.map(v => `<i class="${hasV(c.id, v) ? 'on' : ''}"></i>`).join('')}</div>` : ''}</div>
    <button class="chk ${has ? 'on' : ''}" data-quick="${esc(c.id)}" aria-label="Bocka av ${esc(c.name)}">${has ? '✓' : ''}</button></div>`;
@@ -633,10 +654,12 @@ function renderCardSheet(keepScroll) {
   const p = livePrice(card) || card.p || {};
   const rawN = [...o.values()].reduce((a, b) => a + b.qty, 0);
   const cph = !src && cardPhotoThumb(card.id); let h;
-  if (src) h = `<div class="bigimg">${imgTag(src, set.cat)}</div>`;
+  const isrc = !src ? '' : card.imgf ? (card.imgf.includes('limitless') ? 'Limitless TCG' : 'pokemontcg.io') : set.cat === 'pokemon' ? 'TCGdex' : set.cat === 'onepiece' ? 'OPTCG API' : 'källan';
+  if (src) h = `<div class="bigimg">${imgTag(src, set.cat)}</div><div class="imgsrc"><span class="ipill ok">🖼️ Officiell bild</span> <span class="muted">via ${esc(isrc)}</span></div>`;
   else {
     const iq = encodeURIComponent(imgSearchQ(card, set));
     h = `<div class="bigimg ${cph ? '' : 'badge'}">${cph ? `<img data-ph="cp-${esc(card.id)}" src="${esc(cph)}" alt="">` : sportBadge(card, set)}</div>
+    <div class="imgsrc">${cph ? '<span class="ipill own">📷 Egen bild</span>' : '<span class="ipill none">Ingen officiell bild</span>'}</div>
     <div class="imgbtns"><label class="btn sm pri">📷 ${cph ? 'Byt bild' : 'Fota / lägg till bild'}<input type="file" accept="image/*" capture="environment" hidden id="cardphoto"></label>${cph ? `<button class="btn sm red" data-act="delcardphoto" aria-label="Ta bort bild">✕</button>` : ''}</div>
     <div class="imglinks">🔍 Se bild: <a href="https://www.google.com/search?tbm=isch&q=${iq}" target="_blank" rel="noopener">Google Bilder</a> · <a href="https://www.ebay.com/sch/i.html?_nkw=${iq}" target="_blank" rel="noopener">eBay</a></div>`;
   }
@@ -859,7 +882,7 @@ async function pool(list, n, fn, onStep) {
 async function doExport() {
   const photoKeys = await DB.keys('photos').catch(() => []);
   const photos = {}; for (const k of photoKeys) photos[k] = await DB.get('photos', k);
-  const data = { app: 'lejon-kort', version: 2, exported: new Date().toISOString(), items: [...S.items.values()], favs: [...S.favs], setcfg: S.setcfg, customSets: S.customSets.map(x => { const { byId, ...r } = x; return r; }), settings: { cur: S.cur, pklang: S.pklang, oplang: S.oplang }, cphoto: S.cphoto, photos };
+  const data = { app: 'lejon-kort', version: 2, exported: new Date().toISOString(), items: [...S.items.values()], favs: [...S.favs], setcfg: S.setcfg, customSets: S.customSets.map(x => { const { byId, ...r } = x; return r; }), settings: { cur: S.cur, pklang: S.pklang, oplang: S.oplang }, cphoto: S.cphoto, cphotoSet: S.cphotoSet, photos };
   const blob = new Blob([JSON.stringify(data)], { type: 'application/json' });
   const fname = `lejon-kort-backup-${new Date().toISOString().slice(0, 10)}.json`;
   try {
@@ -880,6 +903,7 @@ async function doImport(file) {
   S.favs = new Set([...(replace ? [] : S.favs), ...(data.favs || [])]); await kvSet('favs', [...S.favs]);
   S.setcfg = Object.assign(replace ? {} : S.setcfg, data.setcfg || {}); await kvSet('setcfg', S.setcfg);
   S.cphoto = Object.assign(replace ? {} : S.cphoto, data.cphoto || {}); await kvSet('cphoto', S.cphoto);
+  S.cphotoSet = Object.assign(replace ? {} : S.cphotoSet, data.cphotoSet || {}); await kvSet('cphotoSet', S.cphotoSet);
   const ids = new Set(S.customSets.map(x => x.id));
   S.customSets = (replace ? [] : S.customSets).concat((data.customSets || []).filter(x => replace || !ids.has(x.id)));
   for (const k of Object.keys(S.sets)) if (k.startsWith('cs-')) delete S.sets[k];
@@ -907,7 +931,7 @@ async function gradedSubmit(form) {
 const curSheetCard = () => { const { cardId, setId } = S.sheet; const set = S.sets[setId]; return { set, card: set.byId.get(cardId) }; };
 const ACTIONS = {
   close() { closeSheet(); },
-  async delcardphoto() { if (!confirm('Ta bort bilden på kortet?')) return; const id = S.sheet.cardId; await DB.del('photos', 'cp-' + id).catch(() => { }); delete S.cphoto[id]; await kvSet('cphoto', S.cphoto); renderCardSheet(true); render(); },
+  async delcardphoto() { if (!confirm('Ta bort bilden på kortet?')) return; const id = S.sheet.cardId; await DB.del('photos', 'cp-' + id).catch(() => { }); delete S.cphoto[id]; delete S.cphotoSet[id]; await kvSet('cphoto', S.cphoto); await kvSet('cphotoSet', S.cphotoSet); renderCardSheet(true); render(); },
   gnew() { S.sheet.gform = 'new'; S.sheet.gpre = null; renderCardSheet(true); },
   gcancel() { S.sheet.gform = null; S.sheet.gpre = null; S.pendingPhoto = null; renderCardSheet(true); },
   async gdel(t) {
@@ -937,7 +961,7 @@ const ACTIONS = {
   async wipe() {
     if (!confirm('Vill du radera HELA samlingen på den här telefonen? Spara gärna en backup först.')) return;
     if (!confirm('Är du helt säker? Det går inte att ångra.')) return;
-    await DB.clear('items'); await DB.clear('photos'); S.items.clear(); rebuildOwned(); S.cphoto = {}; await kvSet('cphoto', {}); S.favs.clear(); await kvSet('favs', []); toast('Samlingen är raderad'); render();
+    await DB.clear('items'); await DB.clear('photos'); S.items.clear(); rebuildOwned(); S.cphoto = {}; S.cphotoSet = {}; await kvSet('cphoto', {}); await kvSet('cphotoSet', {}); S.favs.clear(); await kvSet('favs', []); toast('Samlingen är raderad'); render();
   },
   async allpk() {
     S.showAllPk = true; render(); const jp = S.pklang === 'ja';
@@ -1055,7 +1079,7 @@ document.addEventListener('change', async e => {
     if (el.id === 'importf' && el.files[0]) { await doImport(el.files[0]); el.value = ''; return; }
     if (el.id === 'addpar' && el.value) { const { set, card } = curSheetCard(); await setQty(card, set, el.value, 1); renderCardSheet(true); render(); return; }
     if (el.id === 'cardphoto' && el.files[0]) {
-      const id = S.sheet.cardId; const ph = await compressPhoto(el.files[0]); await DB.put('photos', ph.full, 'cp-' + id); S.cphoto[id] = ph.thumb; await kvSet('cphoto', S.cphoto);
+      const id = S.sheet.cardId; const ph = await compressPhoto(el.files[0]); await saveCardPhoto(id, S.sheet.setId, ph);
       toast('Bild sparad ✓ – syns i hela appen'); renderCardSheet(true); render(); return;
     }
     if (el.id === 'gphoto' && el.files[0]) { S.pendingPhoto = await compressPhoto(el.files[0]); const p = $('#gprev'); p.removeAttribute('data-ph'); p.src = S.pendingPhoto.full; p.style.display = 'block'; return; }
